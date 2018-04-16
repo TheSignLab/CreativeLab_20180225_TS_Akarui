@@ -14,13 +14,13 @@
   font-family: "Brandon-Bold";
   font-style: bold;
   font-weight: 400;
-  src: url("assets/font-bold.woff");
+  src: url("./assets/fonts/font-bold.woff");
 }
 @font-face {
   font-family: "Brandon-Light";
   font-style: normal;
   font-weight: 800;
-  src: url("assets/font-light.woff");
+  src: url("./assets/fonts/font-light.woff");
 }
 html,
 body {
@@ -33,4 +33,11 @@ body {
   width: 100vw;
   height: auto;
   overflow: hidden;
+
+  cursor: url("/assets/cursors/arrow.png"), auto;
+}
+main{
+  width: calc(100vw - 50pt);
+  height: 100vh;
+  display:block;
 }

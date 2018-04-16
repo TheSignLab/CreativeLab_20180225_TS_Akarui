@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  NavTitle = 'Architecture + Studio';
-  NavLogoImg = '/img/nav/default_Logo.png';
+  public NavTitle = 'Architecture + Studio';
+  public NavLogoImg = require('../../../../assets/img/nav/default_logo.png');
 
   constructor() { }
 
@@ -20,7 +20,7 @@ export class NavComponent implements OnInit {
     let setTitleString;
 
     if ( inState === '' ) {
-      setTitleString = 'Eclaire';
+      setTitleString = '';
     }
     if ( inState === 'home/Esencia' ) {
       setTitleString = '<br>Esencia</br> Éclaire';

@@ -1,6 +1,7 @@
 
 main {
   width: calc(100vw - 50pt);
+  height: 100vh;
   display: block;
 overflow: hidden;
 }

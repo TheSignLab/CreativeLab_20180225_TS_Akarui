@@ -1,0 +1,16 @@
+.lang-footer-wrapper{
+  font-family: "Brandon-Bold";
+ display: block;
+ width: calc(100vw - 20pt);
+ height: 35pt;
+ position: fixed;
+ bottom: 0px;
+ left: 0px;
+ padding-left: 10pt;
+ padding-right: 10pt;
+ z-index:9;
+}
+
+.lang-footer-wrapper span{
+  display: inline;
+}
