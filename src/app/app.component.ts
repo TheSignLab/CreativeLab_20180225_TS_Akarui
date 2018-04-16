@@ -15,7 +15,9 @@ import { MnFullpageOptions, MnFullpageService } from 'ngx-fullpage';
   styles: []
 })
 export class AppComponent {
+  public constructor(private titleService: Title ) { }
 
-  
-
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
+  }
 }
