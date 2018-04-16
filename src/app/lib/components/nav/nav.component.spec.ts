@@ -23,8 +23,4 @@ describe('NavComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should update the Nav Title using setTitle() according to the AppState', () => {
-    expect(component).toBeTruthy();
-  });
-
 });
