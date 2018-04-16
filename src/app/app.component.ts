@@ -1,23 +1,10 @@
-
-import { Component } from "@angular/core";
-import { MnFullpageOptions, MnFullpageService } from 'ngx-fullpage';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "ec-root",
-  template: `
-  <ec-menu></ec-menu>
-  <main>
-    <ec-nav></ec-nav>
-    <router-outlet></router-outlet>
-    <ec-footer></ec-footer>  
-    </main>
-  `,
-  styles: []
+  selector: 'ec-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public constructor(private titleService: Title ) { }
-
-  public setTitle( newTitle: string) {
-    this.titleService.setTitle( newTitle );
-  }
+  title = 'Eclaire Architecture +  Studio';
 }

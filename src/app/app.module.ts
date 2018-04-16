@@ -1,23 +1,26 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 
-import { AppRoutingModule } from "./app.routing";
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
+import { ComponentsModule } from './lib/components/components.module';
+import { HomeModule } from './views/home/home.module';
+import { Error404Module } from './views/error404/error404.module';
 
-import { MnFullpageModule } from 'ngx-fullpage';
-
-import { ComponentsModule } from "./lib/components/components.module";
-
-import { HomeModule } from "./views/home/home.module";
-import { NotFoundModule } from "./views/not-found/not-found.module";
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [AppRoutingModule, BrowserModule, MnFullpageModule.forRoot(), // Don't forget to call .forRoot() static method,
-  ComponentsModule, 
-  HomeModule, 
-  NotFoundModule],
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ComponentsModule,
+    HomeModule,
+    Error404Module
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

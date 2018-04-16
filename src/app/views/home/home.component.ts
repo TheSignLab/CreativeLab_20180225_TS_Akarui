@@ -1,25 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import * as moment from "moment";
-
-import 'jquery'; // Import jQuery
-import 'fullpage.js'; // Import fullpage.js
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "ec-home",
- templateUrl: 'template.html',
-  styleUrls: ['style.css']
+  selector: 'ec-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-
-
 export class HomeComponent implements OnInit {
-  now = moment().format();
-  tomorrow = moment().add(1, "days").format();
-  
-  constructor() {
-    
+
+  constructor() { }
+
+  ngOnInit() {
   }
-
-  ngOnInit() {}
-
 
 }

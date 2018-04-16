@@ -1,14 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ng-eclaire"
+    "name": "app-eclaire"
   },
   "apps": [
     {
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
+        "assets/",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -19,12 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "ec",
       "styles": [
-        "../node_modules/milligram/dist/milligram.min.css",
-        "../node_modules/font-awesome/css/font-awesome.css",
         "styles.css"
       ],
-      "scripts": ["../node_modules/moment/min/moment.min.js",
-        "../node_modules/jquery/dist/jquery.js",
+      "scripts": [ "../node_modules/jquery/dist/jquery.js",
         "../node_modules/fullpage.js/dist/jquery.fullpage.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -59,28 +56,6 @@
   },
   "defaults": {
     "styleExt": "css",
-    "class": {
-      "spec": false
-    },
-    "component": {
-      "inlineStyle": true,
-      "inlineTemplate": true,
-      "spec": false
-    },
-    "directive": {
-      "spec": false
-    },
-    "guard": {
-      "spec": false
-    },
-    "module": {
-      "spec": false
-    },
-    "pipe": {
-      "spec": false
-    },
-    "service": {
-      "spec": false
-    }
+    "component": {}
   }
 }

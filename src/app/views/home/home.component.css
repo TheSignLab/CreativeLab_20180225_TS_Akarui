@@ -1,0 +1,11 @@
+
+main {
+  width: calc(100vw - 50pt);
+  display: block;
+overflow: hidden;
+}
+
+.section.footer-section{
+  width: 100vw !important;
+  height: 200pt !important;
+}
