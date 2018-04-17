@@ -1,6 +1,44 @@
 {
 	"component-name": "nav",
 	"component-content": {
-		"view": "oli"
+		"views": [
+
+      {
+      "id" : 0,
+      "name" : "home",
+      "sections" :[
+
+         {
+           "id" : 1,
+           "hash" : "intro",
+           "class" : "section-intro",
+           "titleText" : "none",
+           "titleStyle" : "none",
+           "logoSrc" : "none",
+           "logoStyle" : "none"
+         },
+         {
+           "id" : 2,
+           "hash" : "cover",
+           "class" : "section-cover",
+           "titleText" : "Escencia Éclaire",
+           "titleStyle" : "mix-bold2light",
+           "logoSrc" : "default_logo.png",
+           "logoStyle" : "default"
+         },
+         {
+           "id" : 3,
+           "hash" : "contact",
+           "class" : "section-footer",
+           "titleText" : "Contacto",
+           "titleStyle" : "mix-bold2light",
+           "logoSrc" : "default_logo.png",
+           "logoStyle" : "default"
+         }
+
+        ]
+      }
+
+    ]
 	}
 }
