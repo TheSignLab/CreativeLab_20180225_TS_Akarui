@@ -140,3 +140,76 @@ font-size: 28pt;
 -webkit-filter: brightness(50%);
 cursor: pointer;
 }
+
+
+
+
+.menu-opened{
+  width: 250pt;
+  height: 100vh;
+  -webkit-transition: all 450ms ease-in-out;
+  -moz-transition: all 450ms ease-in-out;
+  -ms-transition: all 450ms ease-in-out;
+  -o-transition: all 450ms ease-in-out;
+  transition: all 450ms ease-in-out;
+}
+.menu-closed{
+  width: 50pt;
+  height: 100vh;
+  -webkit-transition: all 450ms ease-in-out;
+  -moz-transition: all 450ms ease-in-out;
+  -ms-transition: all 450ms ease-in-out;
+  -o-transition: all 450ms ease-in-out;
+  transition: all 450ms ease-in-out;
+}
+
+
+
+.menu-wrapper .upper .menu-label.menu-label-opened h2,span{
+  visibility: hidden;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.menu-wrapper .upper .menu-label.menu-label-closed h2,span{
+  visibility: visible;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.menu-wrapper .upper .menu-label.menu-label-opened{
+
+  left: 80pt;
+  top: 30pt;
+
+
+-ms-transform: rotate(-45deg); /* IE 9 */
+-webkit-transform: rotate(-45deg); /* Safari */
+transform: rotate(-45deg);
+
+-webkit-transition: all 350ms ease-in-out;
+-moz-transition: all 350ms ease-in-out;
+-ms-transition: all 350ms ease-in-out;
+-o-transition: all 350ms ease-in-out;
+transition: all 350ms ease-in-out;
+}
+.menu-wrapper .upper .menu-label.menu-label-closed{
+
+  left: 0pt;
+  top: 40pt;
+
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Safari */
+  transform: rotate(-90deg);
+
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
