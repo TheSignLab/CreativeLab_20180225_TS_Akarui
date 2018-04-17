@@ -1,13 +1,16 @@
 <div class="menu-wrapper">
-<div class="upper">
-  <div class="menu-label">
-      <h2>menu</h2>
-      <span>+</span>
+    <div class="upper">
+      <div class="menu-label" (click)="toogleMenu()" *ngIf="menuState == 'closed'">
+        <h2>menu</h2>
+        <span>+</span>
+      </div>
+    </div>
+    <div class="lower" >
+      <img [src]="this.MenuInstagramImgPath" *ngIf="menuState == 'closed'">
+      <img [src]="this.MenuTwitterImgPath" *ngIf="menuState == 'closed'">
+      <img [src]="this.MenuFacebookImgPath" *ngIf="menuState == 'closed'">
+    </div>
+  <div class="menu-backend" *ngIf="menuState == 'opened'">
+    <h1 (click)="toogleMenu()">oli</h1>
   </div>
-</div>
-<div class="lower">
-<img [src] = "this.MenuInstagramImgPath" >
-<img [src] = "this.MenuTwitterImgPath" >
-<img [src] = "this.MenuFacebookImgPath" >
-</div>
 </div>
