@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FullPageDataService } from '../../../app.component.service';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'ec-nav',
@@ -7,26 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  public NavTitle = 'Architecture + Studio';
+  public NavTitle = '';
+  public NavTitleStyle = '';
   public NavLogoImg = require('../../../../assets/img/nav/default_logo.png');
+  public urlJsonFile = require('assets/navSettings.json');
 
-  constructor() { }
+  private NavSettings: Object[];
+
+ constructor(public dataService: FullPageDataService, private http: Http) { }
 
   ngOnInit() {
+
+    this.dataService.sectionUpdate.subscribe(viewSection => {
+      const StateString = 'home/' + viewSection;
+      this.setState(StateString);
+    });
+
+
+    this.http.get('assets/navSettings.json').subscribe(res => {
+      this.NavSettings = res.json();
+      console.log(res.json());
+    });
+
   }
 
   public setState( inState ): void {
 
     let setTitleString;
 
-    if ( inState === '' ) {
+    if ( inState === 'home/1' ) {
       setTitleString = '';
     }
-    if ( inState === 'home/Esencia' ) {
+    if ( inState === 'home/2' ) {
       setTitleString = '<br>Esencia</br> Éclaire';
     }
-    if ( inState === 'services/' ) {
-      setTitleString = 'Nuestros Servicios';
+    if ( inState === 'home/3' ) {
+      setTitleString = 'Contacto';
     }
 
     this.setTitle( setTitleString );

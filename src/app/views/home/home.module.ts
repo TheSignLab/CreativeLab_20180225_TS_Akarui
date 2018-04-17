@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MnFullpageModule } from 'ngx-fullpage';
 import { ComponentsModule} from '../../lib/components/components.module';
 import { HomeComponent } from './home.component';
+import { FullPageDataService } from '../../app.component.service';
 
 
 @NgModule({
@@ -12,6 +13,9 @@ import { HomeComponent } from './home.component';
     ComponentsModule
   ],
   declarations: [HomeComponent],
-  exports: [HomeComponent]
+  providers: [FullPageDataService ],
+  exports: [HomeComponent],
+
 })
 export class HomeModule { }
+

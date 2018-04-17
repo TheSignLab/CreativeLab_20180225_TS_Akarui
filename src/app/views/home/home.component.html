@@ -1,19 +1,25 @@
 <main>
-<div mnFullpage>
-  <div class="section intro-section fp-section fp-table">
-    <div class="fp-tableCell">
-    1
+  <div [mnFullpage]="options">
+    <div class="section intro-section fp-section fp-table">
+      <div class="fp-tableCell">
+
+        <div class="wrapper">
+            <h1>Section 1</h1>
+        </div>
+
+      </div>
+    </div>
+    <div class="section cover-section fp-section fp-table">
+      <div class="fp-tableCell">
+        <div class="wrapper">
+            <h1>Section 2</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section footer-section fp-section fp-table fp-auto-height">
+      <div class="fp-tableCell">
+        <ec-section-footer></ec-section-footer>
+      </div>
     </div>
   </div>
-  <div class="section cover-section fp-section fp-table">
-    <div class="fp-tableCell">
-      2
-    </div>
-  </div>
-  <div class="section footer-section fp-section fp-table fp-auto-height">
-    <div class="fp-tableCell">
-      <ec-section-footer></ec-section-footer>
-    </div>
-  </div>
-</div>
 </main>

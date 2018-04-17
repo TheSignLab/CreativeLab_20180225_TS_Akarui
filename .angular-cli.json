@@ -10,6 +10,7 @@
       "assets": [
         "assets/",
         "assets/fonts/",
+        "assets/navSettings.json",
         "favicon.ico"
       ],
       "index": "index.html",

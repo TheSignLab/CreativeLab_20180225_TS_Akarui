@@ -8,6 +8,8 @@ import { HomeModule } from './views/home/home.module';
 import { Error404Module } from './views/error404/error404.module';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +22,7 @@ import { Error404Module } from './views/error404/error404.module';
     Error404Module
 
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
