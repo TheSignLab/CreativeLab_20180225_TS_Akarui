@@ -7,8 +7,18 @@ import { ComponentsModule } from './lib/components/components.module';
 import { HomeModule } from './views/home/home.module';
 import { Error404Module } from './views/error404/error404.module';
 
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -19,7 +29,15 @@ import { Error404Module } from './views/error404/error404.module';
     AppRoutingModule,
     ComponentsModule,
     HomeModule,
-    Error404Module
+    Error404Module,
+    HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        })
 
   ],
   providers: [ ],
