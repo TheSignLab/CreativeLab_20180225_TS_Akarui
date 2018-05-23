@@ -1,4 +1,4 @@
-<div class="menu-wrapper" [ngClass]="{'menu-closed': menuState == 'closed', 'menu-opened': menuState == 'opened'}">
+<div class="menu-wrapper" [ngClass]="{'menu-closed': menuState == 'closed', 'menu-opened': menuState == 'opened'}" *ngIf="MenuIsDisplay">
     <div class="upper">
       <div class="menu-label" (click)="toogleMenu()"  [ngClass]="{'menu-label-closed': menuState == 'closed', 'menu-label-opened': menuState == 'opened'}">
         <h2>menu</h2>

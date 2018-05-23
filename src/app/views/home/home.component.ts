@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
       this.nextIndex = nextIndex;
       this.direction = direction;
 
-      this.dataService.update(index);
+      this.dataService.update(nextIndex);
 
     }
 });

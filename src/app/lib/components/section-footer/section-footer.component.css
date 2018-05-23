@@ -4,6 +4,53 @@
   display: block;
   background-color: #5e606c;
   width: 100vw;
-  height: 200pt;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 2vw;
+  padding-right: calc(2vw + 50pt);
+  font-size: 2vw;
 }
 
+.section-footer-wrapper h3{
+    color:#CEA07F;
+    font-size: 0.75em;
+}
+.section-footer-wrapper h2{
+  color:#CEA07F;
+  font-size: 1.25em;
+}
+.section-footer-wrapper h4{
+  color:#FFF;
+  font-size: 0.5em;
+}
+
+.section-footer-wrapper .contact{
+display: block;
+color:#FFF;
+font-size: 0.5em;
+padding: 1em 0em;
+}
+
+.section-footer-wrapper .contact li{
+ display: inline;
+}
+
+.section-footer-wrapper .contact li:after{
+content:"|";
+color:#CEA07F;
+font-family: "font-bold";
+padding-left:0.5em;
+padding-right: 0.5em;
+}
+.section-footer-wrapper .contact li:last-child:after{
+  content:"";
+  font-family: "font-bold";
+  padding-left:0em;
+padding-right: 0em;
+}
+
+.section-footer-wrapper .contact li img{
+  height: 1em;
+  position: relative;
+  top: 0.25em;
+}
