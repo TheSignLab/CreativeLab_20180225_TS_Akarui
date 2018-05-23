@@ -21,6 +21,8 @@
   top: 0px;
   width: calc(100vw - 50pt);
   height: 50pt;
+  z-index: 100;
+  color: #fff;
 }
 .wrapper-nav .nav-title {
   display: block;

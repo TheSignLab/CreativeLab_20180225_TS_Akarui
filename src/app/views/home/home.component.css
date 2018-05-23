@@ -92,4 +92,11 @@ overflow: hidden;
 .view-home .wrapper.s1{
   background-image: url("../../../assets/img/logos/bg.png");
   background-size: cover;
+  z-index: 200;
 }
+
+.view-home .wrapper.s2{
+  background-image: url("../../../assets/img/home/home-render.png");
+  background-size: cover;
+}
+
