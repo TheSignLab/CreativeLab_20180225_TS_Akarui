@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+
 import { HomeComponent } from './views/home/home.component';
 import { ServicesComponent } from './views/services/services.component';
 import { MethodologyComponent } from './views/methodology/methodology.component';
@@ -9,10 +12,6 @@ import { Error404Component } from './views/error404/error404.component';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
   {
     path: 'home',
     component: HomeComponent
@@ -42,6 +41,11 @@ const routes: Routes = [
     component: Error404Component
   },
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     redirectTo: '/404'
   }
@@ -50,4 +54,9 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+  constructor() { }
+
+
+ }

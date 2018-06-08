@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 import { MnFullpageOptions } from 'ngx-fullpage';
 import { FullPageDataService } from '../../../app.component.service';
+
 
 @Component({
   selector: 'ec-menu',
@@ -16,7 +18,7 @@ export class MenuComponent implements OnInit {
   public MenuTwitterImgPath = require('../../../../assets/img/menu/icon_twitter.png');
 
   public menuState = 'closed';
-  constructor(public dataService: FullPageDataService) { }
+  constructor(public dataService: FullPageDataService, private router: Router) { }
 
   ngOnInit() {
     this.dataService.sectionUpdate.subscribe(viewSection => {
@@ -24,7 +26,6 @@ export class MenuComponent implements OnInit {
       this.setState(StateString);
     });
   }
-
 
   public toogleMenu(): void {
     if (this.menuState === 'closed') {
@@ -37,11 +38,10 @@ export class MenuComponent implements OnInit {
   }
 
   private openMenu(): void {
-    console.log('ngReport : The <menu> is showing up ... ');
+
   }
 
   private closeMenu(): void {
-    console.log('ngReport : The <menu> is closing up ... ');
 
   }
 
@@ -62,4 +62,14 @@ export class MenuComponent implements OnInit {
 
   }
 
+
+  public goToRoute(inRoute): void {
+    this.router.navigate(['/' + inRoute + '']);
+    console.log(inRoute);
+  }
+
 }
+
+
+
+
