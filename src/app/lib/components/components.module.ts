@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from '../../app-routing.module';
+
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { MenuComponent } from './menu/menu.component';

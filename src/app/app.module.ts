@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './lib/components/components.module';
 import { HomeModule } from './views/home/home.module';
+import { ServicesModule } from './views/services/services.module';
+import { MethodologyModule } from './views/methodology/methodology.module';
+import { PortfolioModule } from './views/portfolio/portfolio.module';
+import { ContactModule } from './views/contact/contact.module';
 import { Error404Module } from './views/error404/error404.module';
 
 import {HttpClientModule, HttpClient} from '@angular/common/http';
@@ -29,6 +33,10 @@ export function createTranslateLoader(http: HttpClient) {
     AppRoutingModule,
     ComponentsModule,
     HomeModule,
+    ServicesModule,
+    MethodologyModule,
+    PortfolioModule,
+    ContactModule,
     Error404Module,
     HttpClientModule,
         TranslateModule.forRoot({
