@@ -17,7 +17,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'esencia-eclaire',
+    path: 'escencia-eclaire',
     component: HomeComponent
   },
   {
